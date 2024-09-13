@@ -1,21 +1,25 @@
 //define constants
-const CamvasContainerElement = document.getElementById('canvas-container');
-
-//make scene and shit
+const CamvasContainerElement = 
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer();
-
-//Todo: Error Handelling
+console.log(renderer);
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 function init(){
 
-    CamvasContainerElement.appendChild(renderer.domElement);
+    document.getElementById('canvas-container').appendChild(renderer.domElement);
 
-    const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+/*     //size canvas correctly
+    canvas.width = window.innerHeight;
+    canvas.height = window.innerWidth;
+
+    canvas.appendChild(renderer.domElement); */
+
+    // Einfache Geometrie hinzufügen
+    const geometry = new THREE.BoxGeometry();
     const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);

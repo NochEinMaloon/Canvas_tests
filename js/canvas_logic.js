@@ -6,7 +6,14 @@ console.log(renderer);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 function init(){
-    document.getElementById('canvas').appendChild(renderer.domElement);
+
+    const canvas = document.querySelector("body > canvas");
+
+    //size canvas correctly
+    canvas.width = screen.width;
+    canvas.height = screen.height;
+
+    canvas.appendChild(renderer.domElement);
 
     // Einfache Geometrie hinzufügen
     const geometry = new THREE.BoxGeometry();

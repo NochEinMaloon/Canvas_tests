@@ -10,8 +10,8 @@ function init(){
     const canvas = document.querySelector("body > canvas");
 
     //size canvas correctly
-    canvas.width = screen.width;
-    canvas.height = screen.height;
+    canvas.width = window.innerHeight;
+    canvas.height = window.innerWidth;
 
     canvas.appendChild(renderer.domElement);
 

@@ -42,8 +42,8 @@ function Spawncube(){
 
     function animate() {
         requestAnimationFrame(animate);
-        cube.rotation.x += Math.random()-0.5;
-        cube.rotation.y += Math.random()-0.5;
+        cube.rotation.x += Math.random()/0.1-0.2;
+        cube.rotation.y += Math.random()/0.1-0.2;
         renderer.render(scene, camera);
     }
     animate();

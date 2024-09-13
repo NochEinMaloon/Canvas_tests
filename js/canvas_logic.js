@@ -51,4 +51,5 @@ onkeydown = (keydonwevent) => {
     console.log(keydonwevent);
     if(keydonwevent.code == "Space"){
         Spawncube();
+    }
 }

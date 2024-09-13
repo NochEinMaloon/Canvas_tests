@@ -24,12 +24,13 @@ function init(){
     // Animationsschleife
     function animate() {
         requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
+        cube.rotation.x += Math.random();
+        cube.rotation.y += Math.random();
         renderer.render(scene, camera);
     }
     animate();
 }
+
 
 function Spawncube(){
     const geometry = new THREE.BoxGeometry(5, 1, 1);

@@ -76,7 +76,7 @@ function ScreenspacetoWorld(Cam, Screenxy, Zdist){
     console.log(console.log(newx + " | "+ newy));
     
     
-    var Worldpos = [0, 0, 0];
+    var Worldpos = [newx, newy, Zdist];
     return Worldpos;
 
 }
@@ -95,10 +95,14 @@ onmousedown = (mousedownevent) => {
 
     //set Cube Pos to Mouse Pos 
     //TODO: Proper Project
-    otherCUbe.position.x = mousedownevent.clientX;
-    otherCUbe.position.y = mousedownevent.clientY;
 
-    console.log(ScreenspacetoWorld(camera, [xcord, ycord], 5));
+
+    var worldspace = ScreenspacetoWorld(camera, [xcord, ycord], 5);
+
+    console.log(worldspace);
+
+    otherCUbe.position.x = worldspace[0];
+    otherCUbe.position.y = worldspace[1];
 
     
     

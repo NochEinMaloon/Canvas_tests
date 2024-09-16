@@ -118,6 +118,8 @@ onmousedown = (mousedownevent) => {
     x axis goes right */
 
     scene.add(otherCUbe);
+    console.log(otherCUbe);
+    
     
     function animate() {
         requestAnimationFrame(animate);

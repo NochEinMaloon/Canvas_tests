@@ -63,8 +63,13 @@ function ScreenspacetoWorld(Cam, Screenxy, Zdist){
     console.log("--Screenspacetoworld--");
 
     //get Screen dimensions
-    var newx = renderer.getSize().x;
-    var newy = renderer.getSize().y;
+    var cx = renderer.getSize().x/2;
+    var cy = renderer.getSize().y/2;
+
+    var newx = Screenxy[0]+cx;
+    var newy = Screenxy[1]+cy;
+
+
 
     //var 
 

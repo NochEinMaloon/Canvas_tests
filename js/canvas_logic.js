@@ -59,7 +59,7 @@ onkeydown = (keydonwevent) => {
 }
 
 function ScreenspacetoWorld(Cam, Screenxy, Zdist){
-    var scalefac = 100;
+    var scalefac = 100; //this is still wrong and temporary
     var CamObj = Cam;
     console.log("--Screenspacetoworld--");
 

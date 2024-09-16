@@ -50,14 +50,6 @@ function Spawncube(){
 
 }
 
-
-onkeydown = (keydonwevent) => {
-    console.log(keydonwevent);
-    if(keydonwevent.code == "Space"){
-        Spawncube();
-    }
-}
-
 function ScreenspacetoWorld(Cam, Screenxy, Zdist){
     var scalefac = 100; //this is still wrong and temporary
     var CamObj = Cam;
@@ -86,6 +78,22 @@ function ScreenspacetoWorld(Cam, Screenxy, Zdist){
     return Worldpos;
 
 }
+
+//##############   Events   ##############
+onkeydown = (keydonwevent) => {
+    console.log(keydonwevent);
+    if(keydonwevent.code == "Space"){
+        Spawncube();
+    }
+    if(keydonwevent.code == "KeyM"){
+        addEventListener("mousemove", function(e){
+            console.log(e);
+            
+        })
+    }
+}
+
+
 
 
 
@@ -132,3 +140,4 @@ onmousedown = (mousedownevent) => {
     }
     animate();
 }
+

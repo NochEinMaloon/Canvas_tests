@@ -50,9 +50,27 @@ function Spawncube(){
 
 }
 
+
 onkeydown = (keydonwevent) => {
     console.log(keydonwevent);
     if(keydonwevent.code == "Space"){
         Spawncube();
     }
+}
+
+onmousedown = (mousedownevent) => {
+    console.log(mousedownevent);
+    var xcord = mousedownevent.clientX;
+    var ycord = mousedownevent.clientY;
+    console.log(xcord + " | " + ycord);
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
+    
+
+    function animate() {
+        requestAnimationFrame(animate);
+        cube.position.x += 0.01;
+        cube.position.y -= 0.01;
+        renderer.render(scene, camera);
+    }
+    animate();
 }

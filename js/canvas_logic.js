@@ -87,7 +87,7 @@ onkeydown = (keydonwevent) => {
     }
     if(keydonwevent.code == "KeyM"){
         const newcubegeogeometry = new THREE.BoxGeometry(1, 1, 1);
-        //const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
         const newcube = new THREE.Mesh(newcubegeogeometry, material);
         scene.add(newcube);
 

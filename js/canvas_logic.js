@@ -66,14 +66,18 @@ function ScreenspacetoWorld(Cam, Screenxy, Zdist){
     var newx = renderer.getSize().x;
     var newy = renderer.getSize().y;
 
+    //var 
+
 
     
     console.log(Cam);
     console.log(Screenxy[0]+ " | "+Screenxy[1]);
     console.log(Zdist);
+    console.log(console.log(newx + " | "+ newy););
     
     
-    
+    var Worldpos = [0, 0, 0];
+    return Worldpos;
 
 }
 

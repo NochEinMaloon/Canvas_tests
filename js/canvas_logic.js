@@ -59,6 +59,7 @@ onkeydown = (keydonwevent) => {
 }
 
 function ScreenspacetoWorld(Cam, Screenxy, Zdist){
+    var scalefac = 100;
     var CamObj = Cam;
     console.log("--Screenspacetoworld--");
 
@@ -66,8 +67,8 @@ function ScreenspacetoWorld(Cam, Screenxy, Zdist){
     var cx = renderer.getSize().x/2;
     var cy = renderer.getSize().y/2;
 
-    var newx = Screenxy[0]-cx;
-    var newy = Screenxy[1]-cy;
+    var newx = (Screenxy[0]-cx)/scalefac;
+    var newy = (Screenxy[1]-cy)/scalefac;
 
 
 

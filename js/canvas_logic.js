@@ -73,7 +73,7 @@ function ScreenspacetoWorld(Cam, Screenxy, Zdist){
     console.log(Cam);
     console.log(Screenxy[0]+ " | "+Screenxy[1]);
     console.log(Zdist);
-    console.log(console.log(newx + " | "+ newy););
+    console.log(console.log(newx + " | "+ newy));
     
     
     var Worldpos = [0, 0, 0];

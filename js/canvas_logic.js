@@ -86,9 +86,20 @@ onkeydown = (keydonwevent) => {
         Spawncube();
     }
     if(keydonwevent.code == "KeyM"){
+        const newcubegeogeometry = new THREE.BoxGeometry(1, 1, 1);
+        //const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const newcube = new THREE.Mesh(newcubegeogeometry, material);
+        scene.add(newcube);
+
         addEventListener("mousemove", function(e){
             console.log(e);
-            
+
+            var xcord = e.clientX;
+            var ycord = e.clientY;
+            var worldspace = ScreenspacetoWorld(camera, [xcord, ycord], 5);
+
+            newcube.position.x = worldspace[0];
+            newcube.position.y = worldspace[1];
         })
     }
 }

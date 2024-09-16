@@ -63,13 +63,18 @@ onmousedown = (mousedownevent) => {
     var xcord = mousedownevent.clientX;
     var ycord = mousedownevent.clientY;
     console.log(xcord + " | " + ycord);
+
     const geometry = new THREE.BoxGeometry(1, 1, 1);
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const otherCUbe = new THREE.Mesh(geometry, material);
     
 
     function animate() {
         requestAnimationFrame(animate);
-        geometry.position.x += 0.01;
-        geometry.position.y -= 0.01;
+        otherCUbe.position.x += 0.01;
+        otherCUbe.position.y -= 0.01;
+        
+
         renderer.render(scene, camera);
     }
     animate();

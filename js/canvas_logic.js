@@ -68,7 +68,7 @@ function ScreenspacetoWorld(Cam, Screenxy, Zdist){
     var cy = renderer.getSize().y/2;
 
     var newx = (Screenxy[0]-cx)/scalefac;
-    var newy = (Screenxy[1]-cy)/scalefac;
+    var newy = (Screenxy[1]-cy)/scalefac*-1;
 
 
 

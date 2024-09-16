@@ -58,7 +58,7 @@ onkeydown = (keydonwevent) => {
     }
 }
 
-function ScreenspacetoWorld(Cam, screenX, screenY, Zdist){
+function ScreenspacetoWorld(Cam, Screenxy, Zdist){
     var CamObj = Cam;
     console.log("--Screenspacetoworld--");
 
@@ -69,7 +69,7 @@ function ScreenspacetoWorld(Cam, screenX, screenY, Zdist){
 
     
     console.log(Cam);
-    console.log(screenX+ " | "+screenY);
+    console.log(Screenxy[0]+ " | "+Screenxy[1]);
     console.log(Zdist);
     
     
@@ -77,31 +77,7 @@ function ScreenspacetoWorld(Cam, screenX, screenY, Zdist){
 
 }
 
-function screenToWorld(camera, screenPosition, zValue) {
-    // Create a vector from the screen position
-    const vector = new THREE.Vector3(
-        (screenPosition.x / window.innerWidth) * 2 - 1,
-        -(screenPosition.y / window.innerHeight) * 2 + 1,
-        zValue
-    );
 
-    // Unproject the vector from screen space to world space
-    vector.unproject(camera);
-
-    // Calculate the direction from the camera to the vector
-    const dir = vector.sub(camera.position).normalize();
-
-    // Calculate the distance from the camera to the plane at zValue
-    const distance = (zValue - camera.position.z) / dir.z;
-
-    // Calculate the world position
-    const worldPosition = camera.position.clone().add(dir.multiplyScalar(distance));
-
-    console.log(worldPosition);
-    return worldPosition;
-    
-    
-}
 
 onmousedown = (mousedownevent) => {
     console.log(mousedownevent);
@@ -118,7 +94,9 @@ onmousedown = (mousedownevent) => {
     otherCUbe.position.x = mousedownevent.clientX;
     otherCUbe.position.y = mousedownevent.clientY;
 
-    console.log(screenToWorld(camera, [xcord, ycord], 5));
+    console.log(ScreenspacetoWorld(camera, [xcord, ycord], 5));
+
+    
     
 
 

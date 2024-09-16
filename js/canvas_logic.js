@@ -58,6 +58,19 @@ onkeydown = (keydonwevent) => {
     }
 }
 
+function ScreenspacetoWorld(Cam, screenX, screenY, Zdist){
+    var CamObj = Cam;
+    console.log("--Screenspacetoworld--");
+    
+    console.log(Cam);
+    console.log(screenX+ " | "+screenY);
+    console.log(Zdist);
+    
+    
+    
+
+}
+
 onmousedown = (mousedownevent) => {
     console.log(mousedownevent);
     var xcord = mousedownevent.clientX;
@@ -71,7 +84,15 @@ onmousedown = (mousedownevent) => {
     //set Cube Pos to Mouse Pos 
     //TODO: Proper Project
     otherCUbe.position.x = mousedownevent.clientX;
-    otherCUbe.position.y = mousedownevent.clientY
+    otherCUbe.position.y = mousedownevent.clientY;
+
+    console.log(ScreenspacetoWorld(camera, xcord, ycord, 5));
+    
+
+
+/*     0,0 is in the middle
+    y axis goes up
+    x axis goes right */
 
     scene.add(otherCUbe);
     

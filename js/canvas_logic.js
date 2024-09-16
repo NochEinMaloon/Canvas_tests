@@ -68,8 +68,8 @@ onmousedown = (mousedownevent) => {
 
     function animate() {
         requestAnimationFrame(animate);
-        cube.position.x += 0.01;
-        cube.position.y -= 0.01;
+        geometry.position.x += 0.01;
+        geometry.position.y -= 0.01;
         renderer.render(scene, camera);
     }
     animate();

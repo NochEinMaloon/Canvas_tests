@@ -92,7 +92,6 @@ onkeydown = (keydonwevent) => {
         scene.add(newcube);
 
         addEventListener("mousemove", function(e){
-            console.log(e);
 
             var xcord = e.clientX;
             var ycord = e.clientY;
@@ -109,7 +108,7 @@ onkeydown = (keydonwevent) => {
 
 
 onmousedown = (mousedownevent) => {
-    console.log(mousedownevent);
+    //console.log(mousedownevent);
     var xcord = mousedownevent.clientX;
     var ycord = mousedownevent.clientY;
     console.log(xcord + " | " + ycord);
@@ -124,7 +123,7 @@ onmousedown = (mousedownevent) => {
 
     var worldspace = ScreenspacetoWorld(camera, [xcord, ycord], 5);
 
-    console.log(worldspace);
+    //console.log(worldspace);
 
     otherCUbe.position.x = worldspace[0];
     otherCUbe.position.y = worldspace[1];
@@ -138,7 +137,7 @@ onmousedown = (mousedownevent) => {
     x axis goes right */
 
     scene.add(otherCUbe);
-    console.log(otherCUbe);
+    //console.log(otherCUbe);
     
     
     function animate() {

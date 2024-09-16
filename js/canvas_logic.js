@@ -86,13 +86,6 @@ onkeydown = (keydonwevent) => {
         Spawncube();
     }
     if(keydonwevent.code == "KeyM"){
-        if(newcube){
-            console.log("Newcube exists");
-            
-        }else{
-            console.log("Newcube doesnt exist");
-            
-        }
         const newcubegeogeometry = new THREE.BoxGeometry(1, 1, 1);
         const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
         const newcube = new THREE.Mesh(newcubegeogeometry, material);

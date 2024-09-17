@@ -79,6 +79,11 @@ function ScreenspacetoWorld(Cam, Screenxy, Zdist){
 
 }
 
+function testtext(Text){
+    var parameters = ""; //TODO: Implement
+    new THREE.TextGeometry( Text, parameters );
+}
+
 //##############   Events   ##############
 onkeydown = (keydonwevent) => {
     console.log(keydonwevent);

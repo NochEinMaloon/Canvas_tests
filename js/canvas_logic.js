@@ -62,7 +62,7 @@ function Spawncube(){
 function ScreenspacetoWorld(Cam, Screenxy, Zdist){
     var scalefac = 100; //this is still wrong and temporary
     var CamObj = Cam;
-    console.log("--Screenspacetoworld--");
+    //console.log("--Screenspacetoworld--");
 
     //get Screen dimensions
     var cx = renderer.getSize().x/2;
@@ -72,15 +72,10 @@ function ScreenspacetoWorld(Cam, Screenxy, Zdist){
     var newy = (Screenxy[1]-cy)/scalefac*-1;
 
 
-
-    //var 
-
-
-    
-    console.log(Cam);
-    console.log(Screenxy[0]+ " | "+Screenxy[1]);
-    console.log(Zdist);
-    console.log(console.log(newx + " | "+ newy));
+    //console.log(Cam);
+    //console.log(Screenxy[0]+ " | "+Screenxy[1]);
+    //console.log(Zdist);
+    //console.log(console.log(newx + " | "+ newy));
     
     
     var Worldpos = [newx, newy, Zdist];

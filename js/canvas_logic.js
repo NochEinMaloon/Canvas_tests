@@ -120,7 +120,7 @@ onmousedown = (mousedownevent) => {
     //console.log(mousedownevent);
     var xcord = mousedownevent.clientX;
     var ycord = mousedownevent.clientY;
-    console.log(xcord + " | " + ycord);
+    //console.log(xcord + " | " + ycord);
 
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });

@@ -7,6 +7,15 @@ const renderer = new THREE.WebGLRenderer();
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 
+
+//create test material
+const TestMaterial = new THREE.MeshPhongMaterial({
+    color: 0xFF0000,
+    flatShading: false,
+    shininess: 150,
+});
+
+
 function init(){
 
     document.getElementById('canvas-container').appendChild(renderer.domElement);

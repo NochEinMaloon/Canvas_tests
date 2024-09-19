@@ -59,6 +59,22 @@ function Spawncube(){
 
 }
 
+function NewScreenspacetoWorld(Cam, Screenxy, Zdist){
+    var CamObj = Cam;
+
+    //get Campos
+    var campos = CamObj.position;
+    var camrot = CamObj.rotation;
+    var camfov = camera.fov;
+
+    //get 2D Center
+    var cx = renderer.getSize().x/2;
+    var cy = renderer.getSize().y/2;
+
+
+
+}
+
 function ScreenspacetoWorld(Cam, Screenxy, Zdist){
     var scalefac = 100; //this is still wrong and temporary
     var CamObj = Cam;

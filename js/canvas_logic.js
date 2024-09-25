@@ -171,14 +171,6 @@ onmousedown = (mousedownevent) => {
             console.log("Right");
     }
 
-    if(mousedownevent.button==1){
-        console.log("Middle");
 
-        
-    }else{
-        console.log("Left");
-        
-    }
-    
 }
 

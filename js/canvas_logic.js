@@ -159,10 +159,9 @@ onkeydown = (keydonwevent) => {
 
 onmousedown = (mousedownevent) => {
     console.log(mousedownevent);
-    if(mousedownevent.altKey){
-        console.log("Alt Key");
-        
-    }else{
+    if(mousedownevent.button==1){
+        console.log("Rclick");
+
         var xcord = mousedownevent.clientX;
         var ycord = mousedownevent.clientY;
         //console.log(xcord + " | " + ycord);
@@ -203,6 +202,9 @@ onmousedown = (mousedownevent) => {
             renderer.render(scene, camera);
         }
         animate();
+    }else{
+        console.log("Left");
+        
     }
     
 }

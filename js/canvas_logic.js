@@ -132,6 +132,8 @@ function testtext(Text){
 //##############   Events   ##############
 onkeydown = (keydonwevent) => {
     console.log(keydonwevent);
+
+
     if(keydonwevent.code == "Space"){
         Spawncube();
     }
@@ -150,6 +152,9 @@ onkeydown = (keydonwevent) => {
             newcube.position.x = worldspace[0];
             newcube.position.y = worldspace[1];
         })
+    }
+    if(keydonwevent.code == "KeyL"){
+        loadscene();
     }
 }
 

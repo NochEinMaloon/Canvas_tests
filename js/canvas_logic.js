@@ -158,7 +158,7 @@ onkeydown = (keydonwevent) => {
 
 
 onmousedown = (mousedownevent) => {
-    //console.log(mousedownevent);
+    console.log(mousedownevent);
     var xcord = mousedownevent.clientX;
     var ycord = mousedownevent.clientY;
     //console.log(xcord + " | " + ycord);

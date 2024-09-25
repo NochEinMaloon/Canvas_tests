@@ -129,6 +129,50 @@ function testtext(Text){
     new THREE.TextGeometry( Text, parameters );
 }
 
+function Cubeonmouseevent(Event){
+    console.log("Rclick");
+        var xcord = Event.clientX;
+        var ycord = Event.clientY;
+        //console.log(xcord + " | " + ycord);
+
+        const geometry = new THREE.BoxGeometry(1, 1, 1);
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const otherCUbe = new THREE.Mesh(geometry, material);
+
+        //set Cube Pos to Mouse Pos 
+        //TODO: Proper Project
+
+
+        var worldspace = ScreenspacetoWorld(camera, [xcord, ycord], 5);
+
+        //console.log(worldspace);
+
+        otherCUbe.position.x = worldspace[0];
+        otherCUbe.position.y = worldspace[1];
+
+
+
+
+
+    /*     0,0 is in the middle
+        y axis goes up
+        x axis goes right */
+
+        scene.add(otherCUbe);
+        //console.log(otherCUbe);
+
+
+        function animate() {
+            requestAnimationFrame(animate);
+            otherCUbe.position.x += 0.01;
+            otherCUbe.position.y -= 0.01;
+
+
+            renderer.render(scene, camera);
+        }
+        animate();
+}
+
 //##############   Events   ##############
 onkeydown = (keydonwevent) => {
     console.log(keydonwevent);
@@ -174,6 +218,7 @@ onmousedown = (mousedownevent) => {
             break;
         case 2:
             console.log("Right");
+            Cubeonmouseevent(mousedownevent);
     }
 
 

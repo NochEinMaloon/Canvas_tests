@@ -174,6 +174,7 @@ function Cubeonmouseevent(Event){
 }
 
 //##############   Events   ##############
+//Input devices
 onkeydown = (keydonwevent) => {
     console.log(keydonwevent);
 
@@ -201,11 +202,6 @@ onkeydown = (keydonwevent) => {
         loadscene();
     }
 }
-
-
-
-
-
 onmousedown = (mousedownevent) => {
     mousedownevent.preventDefault();
     console.log(mousedownevent);
@@ -215,12 +211,15 @@ onmousedown = (mousedownevent) => {
             break;
         case 1:
             console.log("Middle");
+            Cubeonmouseevent(mousedownevent);
             break;
         case 2:
-            console.log("Right");
-            Cubeonmouseevent(mousedownevent);
+            console.log("Right"); //Somehow prevent default here
     }
 
 
 }
-
+onmousewheel = (wheelevent) => {
+    console.log(wheelevent);
+    
+}

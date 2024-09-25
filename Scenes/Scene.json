@@ -1,0 +1,134 @@
+{
+	"metadata": {
+		"version": 4.6,
+		"type": "Object",
+		"generator": "Object3D.toJSON"
+	},
+	"geometries": [
+		{
+			"uuid": "070c8087-d95b-4e3b-8eeb-795b1cce706e",
+			"type": "TorusKnotGeometry",
+			"radius": 1,
+			"tube": 0.4,
+			"tubularSegments": 64,
+			"radialSegments": 8,
+			"p": 2,
+			"q": 3
+		},
+		{
+			"uuid": "ba4311c3-51a2-4917-af20-88cc5aa93376",
+			"type": "TubeGeometry",
+			"path": {
+				"metadata": {
+					"version": 4.6,
+					"type": "Curve",
+					"generator": "Curve.toJSON"
+				},
+				"arcLengthDivisions": 200,
+				"type": "CatmullRomCurve3",
+				"points": [[2,2,-2],[2,-2,-0.6666666666666667],[-2,-2,0.6666666666666667],[-2,2,2]],
+				"closed": false,
+				"curveType": "centripetal",
+				"tension": 0.5
+			},
+			"tubularSegments": 64,
+			"radius": 1,
+			"radialSegments": 8,
+			"closed": false
+		}],
+	"materials": [
+		{
+			"uuid": "c75933d1-afdb-4268-b6dd-c6429c46f664",
+			"type": "MeshStandardMaterial",
+			"color": 16777215,
+			"roughness": 1,
+			"metalness": 0,
+			"emissive": 0,
+			"envMapRotation": [0,0,0,
+				"XYZ"],
+			"envMapIntensity": 1,
+			"blendColor": 0
+		},
+		{
+			"uuid": "678338ed-e744-47ef-9f1a-e54d6b56a094",
+			"type": "MeshStandardMaterial",
+			"color": 16777215,
+			"roughness": 1,
+			"metalness": 0,
+			"emissive": 0,
+			"envMapRotation": [0,0,0,
+				"XYZ"],
+			"envMapIntensity": 1,
+			"blendColor": 0
+		}],
+	"object": {
+		"uuid": "5c773bb3-475c-4b42-aad3-c264bbfe5178",
+		"type": "Scene",
+		"name": "Scene",
+		"layers": 1,
+		"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+		"up": [0,1,0],
+		"children": [
+			{
+				"uuid": "a08c6d76-ac78-4044-9f41-85e2b39e10fc",
+				"type": "Mesh",
+				"name": "TorusKnot",
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-1.8470608162264346,0,0,1],
+				"up": [0,1,0],
+				"geometry": "070c8087-d95b-4e3b-8eeb-795b1cce706e",
+				"material": "c75933d1-afdb-4268-b6dd-c6429c46f664"
+			},
+			{
+				"uuid": "d83281b5-b11b-42f8-a5d0-5c3ffebb4f38",
+				"type": "Mesh",
+				"name": "Tube",
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,4.170782488253191,0,0,1],
+				"up": [0,1,0],
+				"geometry": "ba4311c3-51a2-4917-af20-88cc5aa93376",
+				"material": "678338ed-e744-47ef-9f1a-e54d6b56a094"
+			},
+			{
+				"uuid": "9574dc4d-6e98-4742-acea-f619644313e9",
+				"type": "HemisphereLight",
+				"name": "HemisphereLight",
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,10,0,1],
+				"up": [0,1,0],
+				"color": 43775,
+				"intensity": 1,
+				"groundColor": 16755200
+			},
+			{
+				"uuid": "6809b9cb-9131-41eb-bb71-b4bda063d086",
+				"type": "DirectionalLight",
+				"name": "DirectionalLight",
+				"layers": 1,
+				"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,5,10,7.5,1],
+				"up": [0,1,0],
+				"color": 16777215,
+				"intensity": 1,
+				"shadow": {
+					"camera": {
+						"uuid": "8645040b-497c-496f-8fc7-42835dab0042",
+						"type": "OrthographicCamera",
+						"layers": 1,
+						"up": [0,1,0],
+						"zoom": 1,
+						"left": -5,
+						"right": 5,
+						"top": 5,
+						"bottom": -5,
+						"near": 0.5,
+						"far": 500
+					}
+				},
+				"target": "fdd06744-8fba-4585-91f8-c489991c9741"
+			}],
+		"backgroundRotation": [0,0,0,
+			"XYZ"],
+		"environmentRotation": [0,0,0,
+			"XYZ"]
+	}
+}

@@ -159,45 +159,51 @@ onkeydown = (keydonwevent) => {
 
 onmousedown = (mousedownevent) => {
     console.log(mousedownevent);
-    var xcord = mousedownevent.clientX;
-    var ycord = mousedownevent.clientY;
-    //console.log(xcord + " | " + ycord);
+    if(mousedownevent.altKey){
+        console.log("Alt Key");
+        
+    }else{
+        var xcord = mousedownevent.clientX;
+        var ycord = mousedownevent.clientY;
+        //console.log(xcord + " | " + ycord);
 
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const otherCUbe = new THREE.Mesh(geometry, material);
+        const geometry = new THREE.BoxGeometry(1, 1, 1);
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const otherCUbe = new THREE.Mesh(geometry, material);
 
-    //set Cube Pos to Mouse Pos 
-    //TODO: Proper Project
-
-
-    var worldspace = ScreenspacetoWorld(camera, [xcord, ycord], 5);
-
-    //console.log(worldspace);
-
-    otherCUbe.position.x = worldspace[0];
-    otherCUbe.position.y = worldspace[1];
-
-    
-    
+        //set Cube Pos to Mouse Pos 
+        //TODO: Proper Project
 
 
-/*     0,0 is in the middle
-    y axis goes up
-    x axis goes right */
+        var worldspace = ScreenspacetoWorld(camera, [xcord, ycord], 5);
 
-    scene.add(otherCUbe);
-    //console.log(otherCUbe);
-    
-    
-    function animate() {
-        requestAnimationFrame(animate);
-        otherCUbe.position.x += 0.01;
-        otherCUbe.position.y -= 0.01;
+        //console.log(worldspace);
+
+        otherCUbe.position.x = worldspace[0];
+        otherCUbe.position.y = worldspace[1];
+
+        
         
 
-        renderer.render(scene, camera);
+
+    /*     0,0 is in the middle
+        y axis goes up
+        x axis goes right */
+
+        scene.add(otherCUbe);
+        //console.log(otherCUbe);
+        
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            otherCUbe.position.x += 0.01;
+            otherCUbe.position.y -= 0.01;
+            
+
+            renderer.render(scene, camera);
+        }
+        animate();
     }
-    animate();
+    
 }
 

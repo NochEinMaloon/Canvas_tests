@@ -158,6 +158,7 @@ onkeydown = (keydonwevent) => {
 
 
 onmousedown = (mousedownevent) => {
+    mousedownevent.preventDefault();
     console.log(mousedownevent);
     switch (mousedownevent.button){
         case 0:

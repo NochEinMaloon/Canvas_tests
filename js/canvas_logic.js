@@ -221,5 +221,8 @@ onmousedown = (mousedownevent) => {
 }
 onmousewheel = (wheelevent) => {
     console.log(wheelevent);
-    
+    var ScollValue = wheelevent.deltaY;
+    console.log(ScollValue);
+
+    camera.translateZ(ScollValue/10);
 }

@@ -203,7 +203,9 @@ onkeydown = (keydonwevent) => {
         loadscene("Scenes/Scene.json");
     }
     if(keydonwevent.code == "KeyS"){
-        loadscene("Scenes/skull.json");
+        var returnvalue = loadscene("Scenes/skull.json");
+        console.log(returnvalue);
+        
     }
 }
 onmousedown = (mousedownevent) => {

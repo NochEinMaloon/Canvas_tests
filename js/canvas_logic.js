@@ -41,12 +41,12 @@ function init(){
 }
 
 
-function loadscene(){
+function loadscene(url){
     const loader = new THREE.ObjectLoader();
 
     loader.load(
         // resource URL
-        "Scenes/Scene.json",
+        url,
 
         // onLoad callback
         // Here the loaded data is assumed to be an object
@@ -66,6 +66,7 @@ function loadscene(){
         }
     );
 }
+
 
 
 function Spawncube(){
@@ -199,7 +200,10 @@ onkeydown = (keydonwevent) => {
         })
     }
     if(keydonwevent.code == "KeyL"){
-        loadscene();
+        loadscene("Scenes/Scene.json");
+    }
+    if(keydonwevent.code == "KeyS"){
+        loadscene("Scenes/skull.json");
     }
 }
 onmousedown = (mousedownevent) => {

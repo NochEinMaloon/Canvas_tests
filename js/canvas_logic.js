@@ -210,14 +210,17 @@ onkeydown = (keydonwevent) => {
         var returnvalue = loadscene("Scenes/skull.json");
         console.log(returnvalue);
 
+
+        //IDK implement Callback
+
         //animate after 100ms
         setTimeout(() => {
             console.log("Anim FUnce");
             
             scene.children.forEach(element => {
                 console.log(element.name);
-                
-            });;
+                setInterval(function () {scene.children[1].rotateY(0.005)}, 1);
+            });
         }, 1000);
 
         

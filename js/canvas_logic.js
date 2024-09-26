@@ -210,11 +210,17 @@ onkeydown = (keydonwevent) => {
         var returnvalue = loadscene("Scenes/skull.json");
         console.log(returnvalue);
 
-        scene.children.forEach(element => {
-            console.log(element.name);
+        //animate after 100ms
+        setTimeout(() => {
+            console.log("Anim FUnce");
             
-            
-        });;
+            scene.children.forEach(element => {
+                console.log(element.name);
+                
+            });;
+        }, 1000);
+
+        
         
         //animate
         //get scene.children.find name("12140_Skull_v3_L2[1].obj")

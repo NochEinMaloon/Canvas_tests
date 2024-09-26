@@ -53,11 +53,15 @@ function loadscene(url){
         function ( obj ) {
             // Add the loaded object to the scene
             scene.add( obj );
+            console.log(obj);
+            
         },
 
         // onProgress callback
         function ( xhr ) {
             console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+            console.log(xhr);
+            
         },
 
         // onError callback

@@ -44,8 +44,6 @@ function init(){
 function loadscene(url){
     const loader = new THREE.ObjectLoader();
 
-    var objects;
-
     loader.load(
         // resource URL
         url,
@@ -56,12 +54,13 @@ function loadscene(url){
             // Add the loaded object to the scene
             scene.add( obj );
             console.log(obj);
-            objects = obj;
+            
         },
 
         // onProgress callback
         function ( xhr ) {
             console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+            console.log(xhr);
             
         },
 
@@ -69,10 +68,6 @@ function loadscene(url){
         function ( err ) {
             console.error( 'An error happened' );
         }
-        console.log("Objects");
-        console.log(objects);
-        return objects;
-        
     );
 }
 

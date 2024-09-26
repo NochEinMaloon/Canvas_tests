@@ -209,7 +209,16 @@ onkeydown = (keydonwevent) => {
     if(keydonwevent.code == "KeyS"){
         var returnvalue = loadscene("Scenes/skull.json");
         console.log(returnvalue);
+
+        scene.children.forEach(element => {
+            console.log(element.name);
+            
+            
+        });;
         
+        //animate
+        //get scene.children.find name("12140_Skull_v3_L2[1].obj")
+        //scene.children[1].rotateY(0.02);
     }
 }
 onmousedown = (mousedownevent) => {

@@ -1,5 +1,4 @@
-//import * as THREE from 'three';
-import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+
 
 
 //define constants
@@ -23,10 +22,6 @@ const TestMaterial = new THREE.MeshPhongMaterial({
 function init(){
 
     document.getElementById('canvas-container').appendChild(renderer.domElement);
-
-    const controls = new OrbitControls(camera, canvas);
-    controls.target.set(0, 5, 0);
-    controls.update();
 
 
 
@@ -255,11 +250,11 @@ onmousedown = (mousedownevent) => {
 
 
 }
-/* onmousewheel = (wheelevent) => {
+onmousewheel = (wheelevent) => {
     console.log(wheelevent);
     var ScollValue = wheelevent.deltaY;
     console.log(ScollValue);
 
     camera.translateZ(ScollValue/100);
 }
- */
+
